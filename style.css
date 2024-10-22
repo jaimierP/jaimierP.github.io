@@ -69,7 +69,6 @@ body{
   margin-top: 30%;
   font-size: 5rem;
   color: white;
-  z-index: 2;
   text-align: center;
   position: relative;
   animation: glitch 2s 4s infinite;
@@ -98,7 +97,7 @@ body{
   background: transparent;
   overflow: hidden;
   top: 0;
-  animation: noise-2 3s linear infinite alternate-reverse, glitch 5s 5s infinite;
+  animation: noise-2 3s linear infinite alternate-reverse, glitch 1s 1s infinite;
 }
 
 @keyframes glitch {
@@ -212,7 +211,7 @@ mix-blend-mode: difference;
   display: block;
   position: fixed;
   float: right;
-  z-index: 1;
+  z-index: 3;
   right: 50px;
   -webkit-user-select: none;
   user-select: none;
@@ -229,6 +228,7 @@ mix-blend-mode: difference;
 {
   text-decoration: none;
   color: black;
+  z-index: 3;
 
   transition: transform .2s;
 }
@@ -244,7 +244,7 @@ mix-blend-mode: difference;
   cursor: pointer;
 
   opacity: 0;
-  z-index: 2;
+  z-index: 3;
 
   -webkit-touch-callout: none;
 }
@@ -446,7 +446,7 @@ mix-blend-mode: difference;
   background-color: black;
   min-height: 100vh;
   padding: 100px;
-  
+
 }
 
 .design {
@@ -458,10 +458,10 @@ mix-blend-mode: difference;
 .timeline{
   width: 80%;
   height: auto;
-  max-width: 800px;
+  max-width: 650px;
   display: grid;
   flex-direction: column;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));;
 }
 
 
@@ -553,6 +553,11 @@ mix-blend-mode: difference;
   width: 70%;
 }
 
+.textbox h2{
+  font-size: 3rem;
+  color: #00b8a5;
+}
+
 #proj_image{
   max-width: 400px;
   float: left;
@@ -562,10 +567,7 @@ mix-blend-mode: difference;
   margin: 10%;
 }
 
-.proj_section h2{
-  color: #eceff0;
 
-}
 
 .proj_section p{
   color: #eceff0;
@@ -656,23 +658,58 @@ mix-blend-mode: difference;
   width: 70%;
 }
 
-/* technologies */
-.technologies{
-  font-size: 2rem;
-  color: white;
-  padding-left: 150px;
-  font-size: 3rem;
-  margin-top: 20%;
-}
+  /* technologies */
+  .technologies{
+    font-size: 2rem;
+    color: white;
+    padding-left: 150px;
+    font-size: 3rem;
+    margin-top: 20%;
+  }
+  
+  .toolsContainer {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 
-.technologies h1{
-  margin-bottom: 5%;
-}
+  .techItems {
+    font-size: 1.5rem;
+    color: black;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px #00b8a5;
+    transition: transform 0.3s ease;
+  }
 
-.technologies span{
-  color: #00b8a5;
-}
+  .techItems:nth-child(9){
+      transition-delay: 200ms;
+  }
 
+  .techItems:nth-child(8){
+    transition-delay: 400ms;
+  }
+  .techItems:nth-child(7){
+    transition-delay: 600ms;
+  }
+  .techItems:nth-child(6){
+    transition-delay: 800ms;
+  }
+  .techItems:nth-child(5){
+    transition-delay: 1000ms;
+  }
+  .techItems:nth-child(4){
+    transition-delay: 1200ms;
+  }
+  .techItems:nth-child(3){
+    transition-delay: 1400ms;
+  }
+  .techItems:nth-child(2){
+    transition-delay: 1600ms;
+  }
+  
 
 
 /*-----------contact------------*/
@@ -792,7 +829,7 @@ mix-blend-mode: difference;
   /*----------education-----------------*/
 
   .education-header{
-    font-size: 20px;
+    font-size: 30px;
     padding-left: 10%;
     margin-top: 40%;
   }
@@ -809,7 +846,7 @@ mix-blend-mode: difference;
 
 /*---------------projects-----------*/
   .proj{
-    font-size: 20px;
+    font-size: 30px;
     padding-left: 10%;
     margin-top: 40%;
   }
@@ -832,9 +869,9 @@ mix-blend-mode: difference;
     margin: 10%;
     text-align: center;
   }
-  
-  .proj_section h2{
-    color: #eceff0;
+
+  .textbox h2{
+    color: #00b8a5;
   }
   
   .proj_section p{
@@ -868,7 +905,7 @@ mix-blend-mode: difference;
   }
 
   #email{
-    font-size: .5rem;
+    font-size: 1rem;
   }
   .wrapper{
     width: 100%;
@@ -876,7 +913,8 @@ mix-blend-mode: difference;
 
   .button{
     width: 100%;
-    font-size: 1rem;
+    font-size: .9rem;
+    padding: 3px;
   }
 
 }
