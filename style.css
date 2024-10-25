@@ -858,7 +858,7 @@ mix-blend-mode: difference;
   .proj_container{
     display: block;
     align-items: center;
-    margin: 5px auto;
+    margin: 20rem auto;
   }
   
   #proj_image{
@@ -888,6 +888,18 @@ mix-blend-mode: difference;
 
   .img_container{
     width: 95%;
+  }
+
+  .proj_section > .proj_container {
+    scale: .5; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 250px 500px;
+    
+  }
+  
+  @keyframes fade-in{
+    to {scale: 1;  opacity: 1;}
   }
 
 /* technologies */
