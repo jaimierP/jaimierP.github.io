@@ -224,29 +224,31 @@ mix-blend-mode: difference;
   transform: scale(1.2);
 }
 
-#menuToggle a 
+#menuToggle a
 {
   text-decoration: none;
   color: black;
-  z-index: 3;
+
 
   transition: transform .2s;
 }
 
-#menuToggle input{
+#checkBox{
   display: block;
   width: 40px;
   height: 32px;
-  position: absolute;
+  
   top: -7px;
   left: -5px;
 
   cursor: pointer;
 
   opacity: 0;
-  z-index: 3;
+  
 
   -webkit-touch-callout: none;
+  position: absolute;
+  z-index: 3;
 }
 
 #menuToggle span{
@@ -318,11 +320,12 @@ mix-blend-mode: difference;
 {
   padding: 10px 0;
   font-size: 22px;
+  z-index: 2;
 }
 
 #menuToggle input:checked ~ ul
 {
-  transform: none;
+ transform: none;
   opacity: 1;
 }
 
