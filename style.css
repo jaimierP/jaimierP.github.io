@@ -17,7 +17,7 @@ html{
 
 
 body{
-    background-color: black;
+    background-color: #0B1215;
     min-height: 100vh;
     min-width: 390px;
     scroll-behavior: smooth;
@@ -110,29 +110,6 @@ body{
 }
 
 
-.scanlines {
-overflow: auto;  
-mix-blend-mode: difference;
-}
-
-.scanlines::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-
-  background: repeating-linear-gradient(
-    to bottom,
-    transparent 0%,
-    rgba(255, 255, 255, 0.05) .5%,
-    transparent 1%
-  );
-
-  animation: fudge 7s ease-in-out alternate infinite;
-}
-
 
 @keyframes fudge {
   from {
@@ -211,7 +188,7 @@ mix-blend-mode: difference;
   display: block;
   position: fixed;
   float: right;
-  z-index: 3;
+  z-index: 1;
   right: 50px;
   -webkit-user-select: none;
   user-select: none;
@@ -219,18 +196,16 @@ mix-blend-mode: difference;
   margin: 6px;
 }
 
-#menuToggle :hover{
+#menu li:hover{
   color: #00b8a5;
   transform: scale(1.2);
+  text-decoration: line-through;
 }
 
 #menuToggle a
 {
   text-decoration: none;
   color: black;
-
-
-  transition: transform .2s;
 }
 
 #checkBox{
@@ -333,7 +308,6 @@ mix-blend-mode: difference;
 
 
 /*--------body---------*/
-
 
 #portrait{
   width: 35%;
@@ -446,7 +420,6 @@ mix-blend-mode: difference;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: black;
   min-height: 100vh;
   padding: 100px;
 
@@ -807,7 +780,12 @@ mix-blend-mode: difference;
   {
   padding: 10px 0;
   font-size: rem;
-  }
+ }
+
+ #menu li:hover{
+  transform: none;
+  text-decoration: line-through;
+}
 
   #menuToggle{
   top:4.7%;
